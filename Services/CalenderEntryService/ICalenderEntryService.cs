@@ -11,5 +11,11 @@ namespace WebAPI_2._2.Services.CalenderEntryService
         IList<CalenderEntry> GetCalenderEntries();
 
         IList<CalenderEntry> CreateCalenderEntry(CalenderEntry entry);
+
+        IList<CalenderEntry> UpdateCalenderEntry(CalenderEntry entry);
+
+        CalenderEntry GetCalenderEntry(int id);
+
+        IList<CalenderEntry> DeleteCalenderEntry(int id);
     }
 }

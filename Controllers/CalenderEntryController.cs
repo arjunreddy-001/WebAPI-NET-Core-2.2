@@ -27,10 +27,31 @@ namespace WebAPI_2._2.Controllers
             return Ok(result);
         }
 
+        [HttpGet("{id}")]
+        public IActionResult GetCalenderEntry(int id)
+        {
+            CalenderEntry result = _calenderEntryService.GetCalenderEntry(id);
+            return Ok(result);
+        }
+
         [HttpPost]
         public IActionResult CreateCalenderEntry(CalenderEntry entry)
         {
             IList<CalenderEntry> result = _calenderEntryService.CreateCalenderEntry(entry);
+            return Ok(result);
+        }
+
+        [HttpPut]
+        public IActionResult UpdateCalenderEntry(CalenderEntry entry)
+        {
+            IList<CalenderEntry> result = _calenderEntryService.UpdateCalenderEntry(entry);
+            return Ok(result);
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult DeleteCalenderEntry(int id)
+        {
+            IList<CalenderEntry> result = _calenderEntryService.DeleteCalenderEntry(id);
             return Ok(result);
         }
     }
